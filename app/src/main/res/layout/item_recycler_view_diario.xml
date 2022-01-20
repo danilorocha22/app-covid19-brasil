@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="0dp"
+    app:strokeColor="@color/cinza_claro"
+    app:strokeWidth="2dp"
+    app:cardCornerRadius="0dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:paddingStart="30sp">
+
+        <LinearLayout
+            android:id="@+id/linearDiario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtLabelDiario"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="@string/label_estado"
+                android:textColor="@color/teal_500" />
+
+            <TextView
+                android:id="@+id/txtEstadosDiario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearConfirmadosDiario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearDiario">
+
+            <TextView
+                android:id="@+id/txtLabelConfirmadosDiario"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="@string/label_confirmados"
+                android:textColor="@color/teal_500" />
+
+            <TextView
+                android:id="@+id/txtConfirmadosDiario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearSuspeitosDiario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearConfirmadosDiario">
+
+            <TextView
+                android:id="@+id/txtLabelSuspeitosDiario"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="@string/label_suspeitos"
+                android:textColor="@color/teal_500" />
+
+            <TextView
+                android:id="@+id/txtSuspeitosDiario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearMortesDiario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearSuspeitosDiario">
+
+            <TextView
+                android:id="@+id/txtLabelMortesDiario"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="@string/label_mortes"
+                android:textColor="@color/teal_500" />
+
+            <TextView
+                android:id="@+id/txtMortesDiario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearDescartadosDiario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearMortesDiario">
+
+            <TextView
+                android:id="@+id/txtLabelDescartadosDiario"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="@string/label_descartados"
+                android:textColor="@color/teal_500" />
+
+            <TextView
+                android:id="@+id/txtDescartadosDiario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

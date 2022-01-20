@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/brasil"
+    tools:context=".ui.estado.EstadoFragment">
+
+    <LinearLayout
+        android:id="@+id/linearPesquisaEstado"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/teal_500"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteNomeEstado"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/white"
+            android:focusedByDefault="true"
+            android:hint="@string/label_pesquisar_estado"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:paddingStart="10dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBarEstado"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="280dp"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        android:indeterminateTint="@color/laranja"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnPesquisarEstado"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/toast_frame"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/pesquisar"
+        android:src="@drawable/ic_baseline_search_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/laranja" />
+
+    <TextView
+        android:id="@+id/txtEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/teal_500"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearPesquisaEstado" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/semi_transparente"
+        android:visibility="invisible"
+        app:strokeColor="@color/teal_500"
+        app:strokeWidth="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEstado">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:paddingStart="15dp">
+
+            <LinearLayout
+                android:id="@+id/linearConfirmados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/txtLabelConfirmados"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_confirmados"
+                    android:textColor="@color/teal_500"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txtConfirmados"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/laranja"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearSuspeitos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearConfirmados">
+
+                <TextView
+                    android:id="@+id/txtLabelSuspeitos"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_suspeitos"
+                    android:textColor="@color/teal_500"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txtSuspeitos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/laranja"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearMortes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearSuspeitos">
+
+                <TextView
+                    android:id="@+id/txtLabelMortes"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_mortes"
+                    android:textColor="@color/teal_500"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txtMortes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/laranja"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearDescartados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearMortes">
+
+                <TextView
+                    android:id="@+id/txtLabelDescartados"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_descartados"
+                    android:textColor="@color/teal_500"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txtDescartados"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/laranja"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearDescartados">
+
+                <TextView
+                    android:id="@+id/txtLabelData"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_data"
+                    android:textColor="@color/teal_500"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txtDataPorEstado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/laranja"
+                    android:textStyle="italic" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

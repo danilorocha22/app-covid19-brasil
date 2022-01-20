@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.danilorocha.appcovid19.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_estado"
+        android:name="com.danilorocha.appcovid19.ui.estado.EstadoFragment"
+        android:label="@string/menu_estado"
+        tools:layout="@layout/fragment_estado" />
+
+    <fragment
+        android:id="@+id/nav_estados"
+        android:name="com.danilorocha.appcovid19.ui.estados.EstadosFragment"
+        android:label="@string/menu_estados"
+        tools:layout="@layout/fragment_estados" />
+
+    <fragment
+        android:id="@+id/nav_diario"
+        android:name="com.danilorocha.appcovid19.ui.estadosdiario.DiarioFragment"
+        android:label="@string/menu_diario"
+        tools:layout="@layout/fragment_diario" />
+
+</navigation>

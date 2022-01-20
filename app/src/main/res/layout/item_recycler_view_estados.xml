@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="0dp"
+    app:strokeColor="@color/cinza_claro"
+    app:strokeWidth="2dp"
+    app:cardCornerRadius="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:paddingStart="30sp">
+
+        <LinearLayout
+            android:id="@+id/linearEstados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtLabelEstados"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="@string/label_estado"
+                android:textColor="@color/teal_500" />
+
+            <TextView
+                android:id="@+id/txtEstados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearConfirmadosEstados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearEstados">
+
+            <TextView
+                android:id="@+id/txtLabelConfirmadosEstados"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="@string/label_confirmados"
+                android:textColor="@color/teal_500" />
+
+            <TextView
+                android:id="@+id/txtConfirmadosEstados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearSuspeitosEstados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearConfirmadosEstados">
+
+            <TextView
+                android:id="@+id/txtLabelSuspeitosEstados"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="@string/label_suspeitos"
+                android:textColor="@color/teal_500" />
+
+            <TextView
+                android:id="@+id/txtSuspeitosEstados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearMortesEstados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearSuspeitosEstados">
+
+            <TextView
+                android:id="@+id/txtLabelMortesEstados"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="@string/label_mortes"
+                android:textColor="@color/teal_500" />
+
+            <TextView
+                android:id="@+id/txtMortesEstados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearDescartadosEstados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearMortesEstados">
+
+            <TextView
+                android:id="@+id/txtLabelDescartadosEstados"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="@string/label_descartados"
+                android:textColor="@color/teal_500" />
+
+            <TextView
+                android:id="@+id/txtDescartadosEstados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

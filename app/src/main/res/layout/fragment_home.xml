@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/teal_500"
+        android:padding="3dp"
+        android:text="@string/txt_titulo_home"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_label_api"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/txt_label_api"
+        android:textAlignment="center"
+        android:textColor="@color/teal_500"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_home" />
+
+    <TextView
+        android:id="@+id/text_api"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_home_nome_api"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_label_api" />
+
+    <TextView
+        android:id="@+id/text_brasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:text="Situação a nível de Brasil"
+        android:textAlignment="center"
+        android:textColor="@color/teal_500"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_api" />
+
+    <ImageButton
+        android:id="@+id/btnAviso"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="46dp"
+        android:background="@android:drawable/ic_dialog_info"
+        android:backgroundTint="@color/amarelo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toEndOf="@+id/text_brasil"
+        app:layout_constraintTop_toBottomOf="@+id/text_api" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewBrasil"
+        android:layout_width="357dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/laranja_transparente"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_brasil"
+        app:strokeColor="@color/teal_500">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:id="@+id/linearConfirmadosBrasil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/txtLabelConfirmadosBrasil"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="7dp"
+                    android:gravity="end"
+                    android:text="@string/label_confirmados"
+                    android:textColor="@color/white"
+                    android:textSize="21sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txtConfirmadosBrasil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/cinza_escuro"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearMortesBrasil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearConfirmadosBrasil">
+
+                <TextView
+                    android:id="@+id/txtLabelMortesBrasil"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="7dp"
+                    android:gravity="end"
+                    android:text="@string/label_mortes"
+                    android:textColor="@color/white"
+                    android:textSize="21sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txtMortesBrasil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/cinza_escuro"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearDataBrasil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearMortesBrasil">
+
+                <TextView
+                    android:id="@+id/txtLabelDataBrasil"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="7dp"
+                    android:gravity="end"
+                    android:text="@string/label_data"
+                    android:textColor="@color/white"
+                    android:textSize="21sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txtDataBrasil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/cinza_escuro"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieHome"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/transparente"
+        android:backgroundTint="@color/transparente"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewBrasil"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/covid_vaccination" />
+
+    <TextView
+        android:id="@+id/txtVacinaHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vacina_salva"
+        android:textColor="@color/laranja"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottieHome" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
